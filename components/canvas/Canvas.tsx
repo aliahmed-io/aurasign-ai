@@ -4,12 +4,16 @@ import { Canvas } from '@react-three/fiber';
 import { Preload } from '@react-three/drei';
 import { ReactNode } from 'react';
 import { SceneManager } from './SceneManager';
+import { usePathname } from 'next/navigation';
 
 interface CanvasProviderProps {
   children?: ReactNode;
 }
 
 export function CanvasProvider({ children }: CanvasProviderProps) {
+  const pathname = usePathname();
+  const isDemo = pathname === '/demo';
+
   return (
     <div className="fixed inset-0 z-0 pointer-events-none">
       <Canvas
@@ -19,7 +23,7 @@ export function CanvasProvider({ children }: CanvasProviderProps) {
       >
         <ambientLight intensity={0.5} />
         <directionalLight position={[10, 10, 5]} intensity={1} />
-        <SceneManager />
+        <SceneManager isDemo={isDemo} />
         {children}
         <Preload all />
       </Canvas>

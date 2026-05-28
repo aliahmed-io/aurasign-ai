@@ -2,6 +2,6 @@
 
 import { LiquidBackground } from './LiquidBackground';
 
-export function SceneManager() {
-  return <LiquidBackground />;
+export function SceneManager({ isDemo }: { isDemo?: boolean }) {
+  return <LiquidBackground isDemo={isDemo} />;
 }

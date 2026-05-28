@@ -30,7 +30,7 @@ export default function Home() {
                 Enter Workspace
               </Button>
             </Link>
-            <Link href="/workspace">
+            <Link href="/demo">
               <Button size="lg" variant="outline" className="w-full sm:w-auto h-14 px-8 rounded-full border-black/20 dark:border-white/20 bg-white/20 dark:bg-black/20 text-black dark:text-white hover:bg-black/5 dark:hover:bg-white/10 hover:border-black/40 dark:hover:border-white/40 transition-all text-lg backdrop-blur-md font-medium">
                 View Demo
               </Button>
